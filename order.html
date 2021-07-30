@@ -6,11 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      
+        .custom-number-input input:focus {
+          outline: none !important;
+        }
+      
+        .custom-number-input button:focus {
+          outline: none !important;
+        }
+      </style>
     <title>FOOD-A-CART - Order</title>
 </head>
 
-<body class="bg-gray-800 text-gray-400 bg-gray-900">
-    <header class="text-gray-400 bg-gray-900 body-font, text-transform: uppercase">
+<body class="bg-gray-800 text-gray-400 bg-gray-900 text-transform: uppercase">
+    <header class="text-gray-400 bg-gray-900 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-center w-full">
             <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
@@ -42,8 +57,17 @@
               py-5
               border-b-2 border-gray-200
             ">
-                        <p class="text-gray-400 ml-4">SUBTOTAL</p>
-                        <p class="text-black mr-4">₹2650</p>
+                        <span class="text-gray-400 ml-4">Product</span>
+                        <select class="text-black mr-4 ">₹2650
+                        <option>Burger</option>
+                        <option>Pasta</option>
+                        <option>Pizza</option>
+                        <option>Noodles</option>
+                        <option>Vegetable Salad</option>
+                        <option>Sandwiches</option>
+                        <option>Fruit Salad</option>
+                        <option>Oatmeal</option>
+                    </select>
                     </div>
                     <div class="
               flex
@@ -53,8 +77,18 @@
               py-5
               border-b-2 border-gray-200
             ">
-                        <p class="text-gray-400 ml-4">SHIPPING</p>
-                        <p class="text-black mr-4">FREE</p>
+                        <p class="text-gray-400 ml-4">Quantity</p>
+                        <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold text-black mr-4">
+                        </label>
+                        <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mr-4">
+                            <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                <span class="m-auto text-2xl font-thin">−</span>
+                              </button>
+                              <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                                <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                <span class="m-auto text-2xl font-thin">+</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="
               flex
@@ -162,5 +196,43 @@
             </span>
         </div>
     </footer>
-
+    <script>
+        function decrement(e) {
+          const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+          );
+          const target = btn.nextElementSibling;
+          let value = Number(target.value);
+          if(value>1){
+            value--;
+          }
+          target.value = value;
+        }
+      
+        function increment(e) {
+          const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+          );
+          const target = btn.nextElementSibling;
+          let value = Number(target.value);
+          value++;
+          target.value = value;
+        }
+      
+        const decrementButtons = document.querySelectorAll(
+          `button[data-action="decrement"]`
+        );
+      
+        const incrementButtons = document.querySelectorAll(
+          `button[data-action="increment"]`
+        );
+      
+        decrementButtons.forEach(btn => {
+          btn.addEventListener("click", decrement);
+        });
+      
+        incrementButtons.forEach(btn => {
+          btn.addEventListener("click", increment);
+        });
+    </script>
 </body>

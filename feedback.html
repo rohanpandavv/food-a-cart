@@ -51,7 +51,7 @@
                                 class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                     </div>
-                    <label class="p-2 w-full">
+                    <div class="p-2 w-full">
                         <div class="relative">
                             <span class="leading-7 text-sm text-gray-400 ">Food Item</span>
                             <select
@@ -66,7 +66,7 @@
                                 <option>Oatmeal</option>
                             </select>
                         </div>
-                    </label>
+                    </div>
                     <label class="p-2 w-full">
                         <div class="relative">
                             <span class="leading-7 text-sm text-gray-400 ">Select Your Country</span>
@@ -327,9 +327,36 @@
                             </select>
                         </div>
                     </label>
+
                     <div class="p-2 w-full">
                         <div class="relative">
-                            <label for="message" class="leading-7 text-sm text-gray-400">Comment</label>
+                            <span class="text-sm text-gray-400">Food Quality</span>
+                                <div class="text-center">
+                                    <div class="mt-2">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="form-radio">
+                                            <span class="ml-2">Amazing</span>
+                                        </label>
+                                        <label class="inline-flex items-center ml-6">
+                                            <input type="radio" class="form-radio">
+                                            <span class="ml-2">Good</span>
+                                        </label>
+                                        <label class="inline-flex items-center ml-6">
+                                            <input type="radio" class="form-radio">
+                                            <span class="ml-2">Average</span>
+                                        </label>
+                                        <label class="inline-flex items-center ml-6">
+                                            <input type="radio" class="form-radio">
+                                            <span class="ml-2">Bad</span>
+                                        </label>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="message" class="leading-7 text-sm text-gray-400">Additional Comments</label>
                             <textarea id="message" name="message"
                                 class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                         </div>
