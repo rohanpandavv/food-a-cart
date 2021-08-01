@@ -58,7 +58,7 @@
               border-b-2 border-gray-200
             ">
                         <span class="text-gray-400 ml-4">Product</span>
-                        <select class="text-black mr-4 ">₹2650
+                        <select class="text-black mr-4 ">
                         <option>Burger</option>
                         <option>Pasta</option>
                         <option>Pizza</option>
@@ -80,13 +80,13 @@
                         <p class="text-gray-400 ml-4">Quantity</p>
                         <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold text-black mr-4">
                         </label>
-                        <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mr-4">
-                            <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                <span class="m-auto text-2xl font-thin">−</span>
+                        <div class="flex flex-row h-10 w-1/4 rounded-lg relative bg-transparent mr-4">
+                            <button data-action="decrement" class=" bg-red-400 hover:text-gray-700 hover:bg-red-600 h-full w-20 rounded-l cursor-pointer outline-none">
+                                <span class="m-auto text-2xl font-medium">−</span>
                               </button>
-                              <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                                <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="m-auto text-2xl font-thin">+</span>
+                              <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="1"></input>
+                                <button data-action="increment" class="bg-green-400 hover:text-gray-700 hover:bg-green-600 h-full w-20 rounded-r cursor-pointer">
+                                <span class="m-auto text-2xl font-medium">+</span>
                             </button>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
             ">
                         <div class="mb-5 flex flex-col min-w-full">
                             <label for="code" class="font-medium text-black">ADD PROMO CODE</label>
-                            <input type="text" id="code" class="w-full py-2 border mt-3 border-gray-300 rounded-md" />
+                            <input type="text" id="code" class="w-full py-2 border mt-3 border-gray-300 rounded-md text-center" />
                         </div>
                         <button class="w-full bg-indigo-600 text-white px-2 py-2 rounded-md">
                             APPLY CODE
@@ -132,9 +132,9 @@
                     <div class="px-3 py-5 border-b-2 border-gray-200">
                         <button class="
                 min-w-full
-                bg-gray-400
+                bg-yellow-400
                 font-semibold
-                text-white
+                text-black
                 px-2
                 py-2
                 rounded-md
@@ -151,11 +151,7 @@
     <footer class="text-gray-400 bg-gray-900 body-font, text-transform: uppercase">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                    viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
+                
                 <span class="ml-3 text-xl">Food-A-Cart</span>
             </a>
             <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
