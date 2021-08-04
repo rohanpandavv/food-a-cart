@@ -58,15 +58,16 @@
               border-b-2 border-gray-200
             ">
                         <span class="text-gray-400 ml-4">Product</span>
-                        <select class="text-black mr-4 ">
-                        <option>Burger</option>
-                        <option>Pasta</option>
-                        <option>Pizza</option>
-                        <option>Noodles</option>
-                        <option>Vegetable Salad</option>
-                        <option>Sandwiches</option>
-                        <option>Fruit Salad</option>
-                        <option>Oatmeal</option>
+                        <select class="text-black mr-4" id="id" onChange="check();">
+                        <option></option>
+                        <option value=150>Burger</option>
+                        <option value=200>Pasta</option>
+                        <option value=300>Pizza</option>
+                        <option value=170>Noodles</option>
+                        <option value=100>Vegetable Salad</option>
+                        <option value=50>Sandwiches</option>
+                        <option value=120>Fruit Salad</option>
+                        <option value=75>Oatmeal</option>
                     </select>
                     </div>
                     <div class="
@@ -99,7 +100,7 @@
               border-b-2 border-gray-200
             ">
                         <p class="text-gray-400 ml-4">TOTAL</p>
-                        <p class="text-indigo-600 mr-4">₹2650</p>
+                        <input class="text-indigo-600 mr-4 w-10" type=text name="number" id="inp" value=""></input>
                     </div>
 
                     <div class="
@@ -221,5 +222,9 @@
         incrementButtons.forEach(btn => {
           btn.addEventListener("click", increment);
         });
+
+        function check() {
+          var cost = document.getElementById("inp").value=document.getElementById("id").value;
+        };
     </script>
 </body>
